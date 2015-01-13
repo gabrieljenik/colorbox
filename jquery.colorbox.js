@@ -637,6 +637,7 @@
 		} else if (settings.get('left') !== false) {
 			left += setSize(settings.get('left'), 'x');
 		} else {
+			left = scrollLeft;
 			left += Math.round(Math.max($window.width() - settings.w - loadedWidth - interfaceWidth, 0) / 2);
 		}
 		
@@ -644,6 +645,7 @@
 			top += Math.max(winheight() - settings.h - loadedHeight - interfaceHeight - setSize(settings.get('bottom'), 'y'), 0);
 		} else if (settings.get('top') !== false) {
 			top += setSize(settings.get('top'), 'y');
+			top = scrollTop;
 		} else {
 			top += Math.round(Math.max(winheight() - settings.h - loadedHeight - interfaceHeight, 0) / 2);
 		}
